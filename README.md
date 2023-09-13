@@ -1,42 +1,42 @@
 # Rxy-kin
 
-Compute Rxy statistic for testing purging of alleles with related samples
+Compute Rxy statistic for testing purging of alleles with related samples\
 
-usage: Rxy-kin.py [-h] -v VCF_FILE -1 SITE1_FILE -2 SITE2_FILE -A POP_A_FILE -B POP_B_FILE [-m LOG_MAG] [-f PERCENTAGE] [-n ITERATIONS] [-c CONFIDENCE] [-Akm POP_A_KIN_MATRIX]
-                  [-Bkm POP_B_KIN_MATRIX] [-Akid POP_A_KIN_ID] [-Bkid POP_B_KIN_ID] [-br BURDEN] [-o OUTPUT]
+usage: Rxy-kin.py [-h] -v VCF_FILE -1 SITE1_FILE -2 SITE2_FILE -A POP_A_FILE -B POP_B_FILE [-m LOG_MAG] [-f PERCENTAGE] [-n ITERATIONS] [-c CONFIDENCE] [-Akm POP_A_KIN_MATRIX]\
+                  [-Bkm POP_B_KIN_MATRIX] [-Akid POP_A_KIN_ID] [-Bkid POP_B_KIN_ID] [-br BURDEN] [-o OUTPUT]\
 
-Calculate the R(A,B) ratio
+Calculate the R(A,B) ratio\\
 
-options:
-  -h, --help            show this help message and exit
-  -v VCF_FILE, --vcf VCF_FILE
-                        Reference genomic VCF file
-  -1 SITE1_FILE, --site1 SITE1_FILE
-                        Sites 1 file with chr # in column 1 and pos # in column 2
-  -2 SITE2_FILE, --site2 SITE2_FILE
-                        Sites 2 file with chr # in column 1 and pos # in column 2
-  -A POP_A_FILE, --popA POP_A_FILE
-                        Subpopulation A file with sample ID in column 1 and subpop ID(A) in column 2
-  -B POP_B_FILE, --popB POP_B_FILE
-                        Subpopulation B file with sample ID in column 1 and subpop ID(B) in column 2
-  -m LOG_MAG, --mag LOG_MAG
-                        Logarithmic magnitude of R(A/B) v. R(B/A) [default: n]
-  -f PERCENTAGE, --per PERCENTAGE
-                        Percentage to be removed during jackknife sampling [default: 20]
-  -n ITERATIONS, --iter ITERATIONS
-                        Number of iterations for sampling [default: 99]
-  -c CONFIDENCE, --conf CONFIDENCE
-                        Confidence interval for data distribution [default: 95]
-  -Akm POP_A_KIN_MATRIX, --Akinmatrix POP_A_KIN_MATRIX
-                        Path to .king file containing kinship matrix (popA exclusive)
-  -Bkm POP_B_KIN_MATRIX, --Bkinmatrix POP_B_KIN_MATRIX
-                        Path to .king file containing kinship matrix (popB exclusive)
-  -Akid POP_A_KIN_ID, --Akinid POP_A_KIN_ID
-                        Path to .king file containing IDs for kinship matrix (popA exclusive)
-  -Bkid POP_B_KIN_ID, --Bkinid POP_B_KIN_ID
-                        Path to .king file containing IDs for kinship matrix (popB exclusive)
-  -br BURDEN, --burden BURDEN
-                        Burden ratio [default: n]
-  -o OUTPUT, --out OUTPUT
-                        Output type (lowercase):'jack' - jackknife plot,'boot' - bootstrap plot,'pv' - R(A/B) point value,'allg' - all plots,'pvj' - point value and jackknife plot,'pvb' - point
-                        value and bootstrap plot,'all' - (default) all outputs
+options:\
+  -h, --help            show this help message and exit\
+  -v VCF_FILE, --vcf VCF_FILE\
+                        Reference genomic VCF file\
+  -1 SITE1_FILE, --site1 SITE1_FILE\
+                        Sites 1 file with chr # in column 1 and pos # in column 2\
+  -2 SITE2_FILE, --site2 SITE2_FILE\
+                        Sites 2 file with chr # in column 1 and pos # in column 2\
+  -A POP_A_FILE, --popA POP_A_FILE\
+                        Subpopulation A file with sample ID in column 1 and subpop ID(A) in column 2\
+  -B POP_B_FILE, --popB POP_B_FILE\
+                        Subpopulation B file with sample ID in column 1 and subpop ID(B) in column 2\
+  -m LOG_MAG, --mag LOG_MAG\
+                        Logarithmic magnitude of R(A/B) v. R(B/A) [default: n]\
+  -f PERCENTAGE, --per PERCENTAGE\
+                        Percentage to be removed during jackknife sampling [default: 20]\
+  -n ITERATIONS, --iter ITERATIONS\
+                        Number of iterations for sampling [default: 99]\
+  -c CONFIDENCE, --conf CONFIDENCE\
+                        Confidence interval for data distribution [default: 95]\
+  -Akm POP_A_KIN_MATRIX, --Akinmatrix POP_A_KIN_MATRIX\
+                        Path to .king file containing kinship matrix (popA exclusive)\
+  -Bkm POP_B_KIN_MATRIX, --Bkinmatrix POP_B_KIN_MATRIX\
+                        Path to .king file containing kinship matrix (popB exclusive)\
+  -Akid POP_A_KIN_ID, --Akinid POP_A_KIN_ID\
+                        Path to .king file containing IDs for kinship matrix (popA exclusive)\
+  -Bkid POP_B_KIN_ID, --Bkinid POP_B_KIN_ID\
+                        Path to .king file containing IDs for kinship matrix (popB exclusive)\
+  -br BURDEN, --burden BURDEN\
+                        Burden ratio [default: n]\
+  -o OUTPUT, --out OUTPUT\
+                        Output type (lowercase):'jack' - jackknife plot,'boot' - bootstrap plot,'pv' - R(A/B) point value,'allg' - all plots,'pvj' - point value and jackknife plot,'pvb' - point\
+                        value and bootstrap plot,'all' - (default) all outputs\
